@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Jasa sedot WC
+        </title>
+    </head>
+    <body>
+        <p id="now"></p>
+        <form>
+            <input id="user_email">
+            <button id="notif">Submite</button>
+        </form>
+        
+        <script>
+            let Tanggal_Hari_Ini = new Date(Date.now()),
+            now = document.getElementById("now")
+            now.innerHTML = Tanggal_Hari_Ini.toLocaleDateString()
+        </script>
+        <script>
+            let notif = document.getElementById("notif")
+            notif.onclick = function(){
+                let user_email = document.getElementById("user_email").value 
+                alert("Kami akan memberikan notifikasi ke "+user_email+". Terima kasih")
+            }
+        </script>
+    </body>
+</html>
